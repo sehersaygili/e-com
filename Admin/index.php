@@ -206,7 +206,6 @@
                     </div>
                 </div>
                 <div class="cards">
-                    <h2>Cards</h2>
                     <div class="item add-card">
                         <div class="card-item">
                             <span class="material-symbols-outlined">
@@ -219,7 +218,30 @@
                             </div>
                         </div>
                     </div>
-                
+                    <div class="item add-card">
+                        <div class="card-item">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Yeni İçerik Ekle</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item add-card">
+                        <div class="card-item">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Yeni Kullanıcı Oluştur</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!------- END OF RIGHT ------->
