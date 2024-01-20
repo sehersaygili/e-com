@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Responsive Dashboard</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />        
-        <link rel="stylesheet" href="./style.css">
-        <script src="./index.js"></script>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    </head>
+<?php include 'head.php' ?>    
     <body>
         <div class="container">
             <aside>
@@ -26,62 +13,64 @@
                         <span class="material-symbols-outlined">
                             grid_view
                         </span>
-                        <h3>Dashboard</h3>
+                        <h3>Anasayfa</h3>
                     </a>
                     <a href="#" class="active">
                         <span class="material-symbols-outlined">
                             person
                         </span>
-                        <h3>Cutomers</h3>
+                        <h3>Müşteriler</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-outlined">
                             receipt_long
                         </span>
-                        <h3>Orders</h3>
+                        <h3>Siparişler</h3>
                     </a>
+                    <!--
                     <a href="#">
                         <span class="material-symbols-outlined">
                             insights
                         </span>
                         <h3>Analytics</h3>
                     </a>
+                    -->
                     <a href="#">
                         <span class="material-symbols-outlined">
                             mail
                         </span>
-                        <h3>Messages</h3>
+                        <h3>Mesajlar</h3>
                         <span class="message-count">26</span>
                     </a>
                     <a href="#">
                         <span class="material-symbols-outlined">
                             inventory
                         </span>
-                        <h3>Products</h3>
+                        <h3>Ürünler</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-outlined">
                             report
                         </span>
-                        <h3>Reports</h3>
+                        <h3>Sorun Bildirimleri</h3>
                     </a>
                     <a href="#"> 
                         <span class="material-symbols-outlined">
                             settings
                         </span>
-                        <h3>Settings</h3>
+                        <h3>Ayarlar</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-outlined">
                             add
                         </span>
-                        <h3>Add Product</h3>
+                        <h3>Ürün Ekle</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-outlined">
                             logout
                         </span>
-                        <h3>Logout</h3>
+                        <h3>Çıkış Yap</h3>
                     </a>
                 </div>
             </aside>
@@ -97,8 +86,8 @@
                             </span>
                         <div class="middle">
                             <div class="left">
-                                <h3>Total Sales</h3>
-                                <h1>$25,024</h1>
+                                <h3>Toplam Satış</h3>
+                                <h1>₺25.024</h1>
                             </div>
                             <div class="progress">
                                 <svg>
@@ -109,7 +98,7 @@
                                 </div>
                             </div>
                         </div>
-                        <small class="text-muted">Last 24 hours</small>
+                     <!--   <small class="text-muted">Last 24 hours</small> -->
                     </div>
                     <!------- END OF SALES ------->
 
@@ -119,8 +108,8 @@
                             </span>
                         <div class="middle">
                             <div class="left">
-                                <h3>Total Expenses</h3>
-                                <h1>$14,160</h1>
+                                <h3>Toplam Giderler</h3>
+                                <h1>₺14.160</h1>
                             </div>
                             <div class="progress">
                                 <svg>
@@ -131,7 +120,6 @@
                                 </div>
                             </div>
                         </div>
-                        <small class="text-muted">Last 24 hours</small>
                     </div>
                     <!------- END OF EXPENSES ------->
 
@@ -141,8 +129,8 @@
                             </span>
                         <div class="middle">
                             <div class="left">
-                                <h3>Total Income</h3>
-                                <h1>$10,864</h1>
+                                <h3>Toplam Gelirler</h3>
+                                <h1>₺10.864</h1>
                             </div>
                             <div class="progress">
                                 <svg>
@@ -153,21 +141,20 @@
                                 </div>
                             </div>
                         </div>
-                        <small class="text-muted">Last 24 hours</small>
                     </div>
                     <!------- END OF INCOME ------->
                 </div>
                 <!------- END OF INSIGHTS ------->
 
                 <div class="recent-orders">
-                    <h2>Recent Orders</h2>
+                    <h2>Son Siparişler</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Product Number</th>
-                                <th>Payment</th>
-                                <th>Status</th>
+                                <th>Ürün</th>
+                                <th>Ürün Numarası</th>
+                                <th>Ödeme Durumu</th>
+                                <th>Durum</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -175,16 +162,16 @@
                             <tr>
                                 <td>Nescafe Black Roast</td>
                                 <td>231A3FF2</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="danger">Details</td>
+                                <td>Başarılı</td>
+                                <td class="primary">Tamamlandı</td>
+                                <td class="danger">Detay</td>
                             </tr>
                             <tr>
                                 <td>Nestle Coffee Mate</td>
                                 <td>D44A3FF2</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="danger">Details</td>
+                                <td>Başarısız</td>
+                                <td class="warning">Bekleniyor</td>
+                                <td class="danger">Detay</td>
                             </tr>
                         </tbody>
                     </table>
@@ -228,8 +215,7 @@
                         </div>
                         <div class="right">
                             <div class="info">
-                                <h3>ADD NEW PAGES</h3>
-                                <small class="text-muted">Add page to sidebar </small>
+                                <h3>Yeni Sayfa Ekle</h3>
                             </div>
                         </div>
                     </div>
@@ -240,3 +226,5 @@
         </div>
     </body>
 </html>
+
+<?php include 'script.php' ?>  
