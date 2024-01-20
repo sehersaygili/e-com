@@ -20,7 +20,7 @@
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
 
-    --card-padding: 1.8rem;
+    --card-padding: 1.0rem;
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
@@ -253,7 +253,7 @@ main .date input[type="date"] {
 main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    gap: 1.4rem;
 }
 
 main .insights > div {
@@ -274,7 +274,7 @@ main .insights > div span {
     padding: 0.2rem;
     border-radius: 50%;
     color: var(--color-white);
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 main .insights > div.expenses span {
@@ -383,21 +383,21 @@ main .recent-orders a {
 }
 
 /* ------ RIGHT ----- */
-.right{
+.right, .right-1{
     margin-top: 1.4rem;
 }
 
-.right .top{
+.right .top, .right-1 .top{
     display: flex;
     justify-content: end;
     gap: 2rem;
 }
 
-.right .top button {
+.right .top button, .right-1 .top button {
     display: none;
 }
 
-.right .theme-toggler {
+.right .theme-toggler, .right-1 .theme-toggler {
     background: var(--color-light);
     display: flex;
     justify-content: space-between;
@@ -407,7 +407,7 @@ main .recent-orders a {
     cursor: pointer;
     border-radius: var(--border-radius-1);
 }
-.right .theme-toggler span {
+.right .theme-toggler span,.right-1 .theme-toggler span{
     font-size: 1.2rem;
     width:50%;
     height: 100%;
@@ -416,13 +416,13 @@ main .recent-orders a {
     justify-content: center;
 }
 
-.right .theme-toggler span.active {
+.right .theme-toggler span.active, .right-1 .theme-toggler span.active {
     background: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
 }
 
-.right .top .profile {
+.right .top .profile, .right-1 .top .profile{
     display: flex;
     gap: 2rem;
     text-align: right;
@@ -468,7 +468,17 @@ main .recent-orders a {
     display: flex;
 }
 
+
 /* Show All Items */
+.recent-users .show-all-users {   
+    display: inline-flex;
+    align-items: center;
+    float: right;
+    margin-top:5px;
+}
+.recent-users .show-all-users .material-symbols-outlined {
+    margin-right: 5px;
+}
 .recent-orders .show-all-orders {   
     display: inline-flex;
     align-items: center;
@@ -477,4 +487,46 @@ main .recent-orders a {
 }
 .recent-orders .show-all-orders .material-symbols-outlined {
     margin-right: 5px;
+}
+
+.users {
+    margin-top: 7rem;
+}
+.recent-users h2 {
+    margin-bottom: 1.8rem;
+}
+
+.recent-users table {
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.recent-users table:hover {
+    box-shadow: none;
+}
+
+table tbody td {
+    height: 2.8rem;
+    border-bottom:1 px solid var(--color-light);
+    color: var(--color-dark-variant)
+}
+
+table tbody tr:last-child td {
+    border:none;
+}
+
+.recent-users a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+main .recent-users {
+    margin-top: 2rem;
 }
