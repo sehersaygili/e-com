@@ -87,7 +87,7 @@
                         <div class="middle">
                             <div class="left">
                                 <h3>Toplam Satış</h3>
-                                <h1>₺25.024</h1>
+                                <h2>₺25.024</h2>
                             </div>
                             <div class="progress">
                                 <svg>
@@ -175,8 +175,67 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="#">Show All</a>
+                    <a href="#" class="show-all-orders">
+                        <span class="material-symbols-outlined">
+                        line_end_arrow_notch
+                        </span>
+                        Show All
+                    </a>
                 </div>
+
+                <div class="recent-orders">
+                    <h2>Son Kullanıcılar</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kullanıcı ID</th>
+                                <th>Kullanıcı</th>
+                                <th>Email</th>
+                                <th>Telefon</th>
+                                <th>Memnuniyet</th>
+                                <th>Durum</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Seher Saygılı</td>
+                                <td>sehersygl111@gmail.com</td>
+                                <td>1112223355</td>
+                                <td class="primary">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                </td>
+
+                                <td class="danger">Detay</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Merve Bilgin</td>
+                                <td>mervebilgin@gmail.com</td>
+                                <td>44462223355</td>
+                                <td class="primary">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                </td>
+
+                                <td class="danger">Detay</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="show-all-orders">
+                        <span class="material-symbols-outlined">
+                        line_end_arrow_notch
+                        </span>
+                        Show All
+                    </a>
+                </div>
+
+
             </main>
             <!------- END OF MAIN ------->
 

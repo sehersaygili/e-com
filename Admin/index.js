@@ -16,3 +16,4 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Theme toggler element not found.');
     }
 });
+

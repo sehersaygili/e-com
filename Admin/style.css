@@ -271,7 +271,7 @@ main .insights > div:hover {
 
 main .insights > div span {
     background: var(--color-primary);
-    padding: 0.5rem;
+    padding: 0.2rem;
     border-radius: 50%;
     color: var(--color-white);
     font-size: 2rem;
@@ -292,8 +292,8 @@ main .insights > div .middle {
 }
 
 main .insights h3 {
-    margin:1rem 0 0.6rem;
-    font-size:1rem;
+    margin:1rem 0 0.1rem;
+    font-size:0.9rem;
 }
 
 main .insights .progress {
@@ -318,7 +318,7 @@ main .insights svg circle {
 }
 
 main .insights .sales svg circle {
-    stroke-dashoffset: 20;
+    stroke-dashoffset: 10;
     stroke-dasharray: 90;
 }
 
@@ -461,9 +461,20 @@ main .recent-orders a {
 }
 
 .right .add-card .card-item {
-    padding: 0.6rem;
+    padding: 0.2rem;
     color:var(--color-white);
-    border-radius: 50%;
+    border-radius: 20%;
     background:var(--color-danger);
     display: flex;
+}
+
+/* Show All Items */
+.recent-orders .show-all-orders {   
+    display: inline-flex;
+    align-items: center;
+    float: right;
+    margin-top:5px;
+}
+.recent-orders .show-all-orders .material-symbols-outlined {
+    margin-right: 5px;
 }
