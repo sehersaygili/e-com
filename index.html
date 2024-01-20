@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Responsive Dashboard</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />        
         <link rel="stylesheet" href="./style.css">
+        <script src="./index.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     </head>
@@ -85,7 +87,6 @@
             </aside>
             <!------- END OF ASIDE ------->
             <main>
-                <h1>Dashboard</h1>
                 <div class="date">
                     <input type="date">
                 </div>
@@ -96,8 +97,8 @@
                             </span>
                         <div class="middle">
                             <div class="left">
-                                <h3>Total</h3>
-                                <h1>$25</h1>
+                                <h3>Total Sales</h3>
+                                <h1>$25,024</h1>
                             </div>
                             <div class="progress">
                                 <svg>
@@ -118,8 +119,8 @@
                             </span>
                         <div class="middle">
                             <div class="left">
-                                <h3>Total</h3>
-                                <h1>$14,99</h1>
+                                <h3>Total Expenses</h3>
+                                <h1>$14,160</h1>
                             </div>
                             <div class="progress">
                                 <svg>
@@ -141,14 +142,14 @@
                         <div class="middle">
                             <div class="left">
                                 <h3>Total Income</h3>
-                                <h1>$25</h1>
+                                <h1>$10,864</h1>
                             </div>
                             <div class="progress">
                                 <svg>
                                     <circle cx='38' cy='38' r='36'></circle>
                                 </svg>
                                 <div class="number">
-                                    <p>81%</p>
+                                    <p>44%</p>
                                 </div>
                             </div>
                         </div>
@@ -190,6 +191,35 @@
                     <a href="#">Show All</a>
                 </div>
             </main>
+            <!------- END OF MAIN ------->
+
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-symbols-outlined">
+                            menu
+                        </span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-symbols-outlined active">
+                            light_mode
+                        </span>
+                        <span class="material-symbols-outlined ">
+                            dark_mode
+                        </span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Seher!</b></p>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="./images/profile-3.jpg" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------- END OF RIGHT ------->
         </div>
     </body>
 </html>
