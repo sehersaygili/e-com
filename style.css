@@ -101,6 +101,12 @@ small {
     font-size: 0.75rem;
 }
 
+.profile{
+    width: 60%;
+    height: auto;
+    overflow-x: hidden;
+}
+
 .profile-photo {
     width:2.8rem;
     height: 2.8rem;
