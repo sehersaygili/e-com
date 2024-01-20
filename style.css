@@ -2,9 +2,9 @@
 
 /* --------------- ROOT VARIABLES --------------- */
 :root {
-    --color-primary: #7380ec;
-    --color-danger: #ff7782;
-    --color-success: #41f1b6;
+    --color-primary: #f9585a;
+    --color-danger:#8c76f0;
+    --color-success: #26cb94;
     --color-warning: #ffbb55;
     --color-white: #fff;
     --color-info-dark: #7d8da1;
@@ -13,7 +13,7 @@
     --color-light: rgba(132,139,200,0.18);
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
+    --color-background: #eff8f8;
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
