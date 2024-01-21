@@ -529,4 +529,32 @@ table tbody tr:last-child td {
 
 main .recent-users {
     margin-top: 2rem;
+    overflow-x: auto; 
 }
+
+.users .recent-users .pagination {
+    display: absolute;
+    margin-top: 20px;
+    justify-content:end;
+
+}
+.users .recent-users .pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #333;
+    cursor: pointer;
+    border-radius: 50%;
+ }
+ .users .recent-users .pagination button:hover {
+    background-color: #ddd;
+ }
+ .users .recent-users .pagination button:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+ }
+
+
+ 
