@@ -1,4 +1,3 @@
-@import url("https://font.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /* --------------- ROOT VARIABLES --------------- */
 :root {
@@ -55,7 +54,7 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    font-family: poppins, sans-serif;
+    font-family: 'Inter',Arial;
     font-size: 0.88rem; 
     background:var(--color-background);
     user-select: none;

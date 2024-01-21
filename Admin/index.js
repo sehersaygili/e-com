@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         themeToggler.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme-variables');
             
-            // Toggle the "active" class between the two spans
             const lightModeIcon = themeToggler.querySelector('.material-symbols-outlined.active');
             const darkModeIcon = themeToggler.querySelector('.material-symbols-outlined:not(.active)');
             
@@ -15,9 +14,4 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Theme toggler element not found.');
     }
-
-    
-
 });
-
-
