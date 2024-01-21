@@ -1,4 +1,4 @@
-<?php include 'head.php';
+<?php include 'assets/head.php';
 $usersPerPage = 4; // Sayfa başına gösterilecek kullanıcı sayısı
 $currentPage = isset($_GET['page']) ? $_GET['page'] : 1; // Geçerli sayfa numarası
 $startFrom = ($currentPage - 1) * $usersPerPage; // Başlangıç indeksi
@@ -12,7 +12,7 @@ $total = $totalResult['total'];
 
 ?> 
     <div class="container">
-    <?php include 'sidebar.php' ?> 
+    <?php include 'assets/sidebar.php' ?> 
     <div class="users">
         <div class="recent-users">
             <h2>Kayıtlı Kullanıcılar</h2>
@@ -97,5 +97,5 @@ $total = $totalResult['total'];
         </div>
     </div>
 
-    <?php include 'script.php' ?>  
+    <?php include 'assets/script.php' ?>  
   

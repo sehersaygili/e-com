@@ -1,6 +1,5 @@
-<script src="./index.js"></script>
+<script src="./js/index.js"></script>
 <?php
-// script.php
 $totalPages = ceil($total / $usersPerPage);
 $currentPage = $currentPage ?? 1;
 ?>

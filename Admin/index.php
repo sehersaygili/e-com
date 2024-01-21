@@ -1,19 +1,17 @@
-<?php include 'head.php' ?>    
+<?php include 'assets/head.php' ?>    
     <body>
         <div class="container">
-            <?php include 'sidebar.php' ?> 
+            <?php include 'assets/sidebar.php' ?> 
             <!------- END OF ASIDE ------->
 
-            <?php include 'main.php' ?> 
+            <?php include 'assets/main.php' ?> 
             <!------- END OF MAIN ------->
-            <?php include 'head_right.php' ?> 
+            <?php include 'assets/head_right.php' ?> 
                 <div class="right">
                     <div class="cards">
                         <div class="item add-card">
                             <div class="card-item">
-                                <span class="material-symbols-outlined">
-                                    add
-                                </span>
+                                <span class="material-symbols-outlined">add</span>
                             </div>
                             <div class="right">
                                 <div class="info">
@@ -50,7 +48,9 @@
             </div>
             <!------- END OF RIGHT ------->
         </div>
-    </body>
+        <?php include 'modals/new-card.php' ?>  
+
+        <?php include 'assets/script.php' ?>  
+    </body>   
 </html>
 
-<?php include 'script.php' ?>  
