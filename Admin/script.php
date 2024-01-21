@@ -20,20 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-
-    // Önceki sayfa
-    document.getElementById('prevPage').addEventListener('click', function () {
-        if (currentPage > 1) {
-            updatePage(currentPage - 1);
-        }
-    });
-
-    // Sonraki sayfa
-    document.getElementById('nextPage').addEventListener('click', function () {
-        if (currentPage < totalPages) {
-            updatePage(currentPage + 1);
-        }
-    });
 });
 </script>
 <script src="./index.js"></script>

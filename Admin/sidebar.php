@@ -6,13 +6,13 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <a href="index.php" class="active">
+                    <a href="index.php" <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'class="active"' : ''; ?>>
                         <span class="material-symbols-outlined">
                             grid_view
                         </span>
                         <h3>Anasayfa</h3>
                     </a>
-                    <a href="customers.php">
+                    <a href="customers.php" <?php echo (basename($_SERVER['PHP_SELF']) == 'customers.php') ? 'class="active"' : ''; ?>>
                         <span class="material-symbols-outlined">
                             person
                         </span>
@@ -37,7 +37,7 @@
                             mail
                         </span>
                         <h3>Mesajlar</h3>
-                        <span class="message-count">26</span>
+                        <span class="message-count">10</span>
                     </a>
                     <a href="#">
                         <span class="material-symbols-outlined">

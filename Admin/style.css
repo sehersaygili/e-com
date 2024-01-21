@@ -10,7 +10,7 @@
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
     --color-dark: #363949;
-    --color-light: rgba(132,139,200,0.18);
+    --color-light: rgba(45, 51, 109, 0.18);
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #eff8f8;
@@ -201,7 +201,7 @@ aside .sidebar a:last-child {
 }
 
 aside .sidebar a.active {
-    background: var(--color-light);
+    background: #eeecf4;
     color: var(--color-primary);
     margin-left:0;
 }
@@ -227,11 +227,11 @@ aside .sidebar a:hover span{
 }
 
 aside .sidebar .message-count {
-    background: var(--color-danger);
-    color: var(--color-white);
+    background:  #fca9ab;
+    color: var(--color-dark);
     padding: 2px 10px;
     font-size: 11px;
-    border-radius: var(--border-radius-1);
+    border-radius: var(--border-radius-3);
 }
 
 /* --------------- MAIN --------------- */
@@ -529,7 +529,6 @@ table tbody tr:last-child td {
 
 main .recent-users {
     margin-top: 2rem;
-    overflow-x: auto; 
 }
 
 .users .recent-users .pagination {
