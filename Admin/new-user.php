@@ -67,7 +67,7 @@ include_once 'assets/validation_errors.php';
             </div>
             <div class="col-md-3" style="margin-bottom: 15px;">
                 <label>Telefon</label>
-                <input class="form-control" type="text" name="phone" >
+                <input class="form-control" type="text" name="phone" value="+90">
                 <span class="error"><?php echo $phoneErr; ?></span>
             </div>
             <div class="col-md-12" style="margin-bottom: 15px;">
