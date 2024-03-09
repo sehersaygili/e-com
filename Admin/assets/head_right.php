@@ -20,7 +20,7 @@
                             <small class="text-muted">Admin</small>
                         </div>
                         <div class="profile-photo">
-                            <img src="./images/profile-3.jpg" >
+                            <img src="" >
                         </div>
                     </div>
                 </div>

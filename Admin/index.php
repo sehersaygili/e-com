@@ -9,29 +9,7 @@
             <?php include 'assets/head_right.php' ?> 
                 <div class="right">
                     <div class="cards">
-                        <div class="item add-card">
-                            <div class="card-item">
-                                <span class="material-symbols-outlined">add</span>
-                            </div>
-                            <div class="right">
-                                <div class="info">
-                                    <h3>Yeni Sayfa Ekle</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item add-card">
-                            <div class="card-item">
-                                <span class="material-symbols-outlined">
-                                    add
-                                </span>
-                            </div>
-                            <div class="right">
-                                <div class="info">
-                                    <h3>Yeni İçerik Ekle</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item add-card">
+                        <div class="item add-card" onclick="newUser()">
                             <div class="card-item">
                                 <span class="material-symbols-outlined">
                                     add
@@ -48,9 +26,12 @@
             </div>
             <!------- END OF RIGHT ------->
         </div>
-        <?php include 'modals/new-card.php' ?>  
+        <?php include 'modals/new-user.php' ?>  
 
         <?php include 'assets/script.php' ?>  
+
     </body>   
 </html>
+
+
 

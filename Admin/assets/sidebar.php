@@ -16,14 +16,9 @@
                         <span class="material-symbols-outlined">
                             person
                         </span>
-                        <h3>Müşteriler</h3>
+                        <h3>Kullanıcılar</h3>
                     </a>
-                    <a href="#">
-                        <span class="material-symbols-outlined">
-                            receipt_long
-                        </span>
-                        <h3>Siparişler</h3>
-                    </a>
+                   
                     <!--
                     <a href="#">
                         <span class="material-symbols-outlined">
@@ -31,7 +26,7 @@
                         </span>
                         <h3>Analytics</h3>
                     </a>
-                    -->
+                    
                     <a href="#">
                         <span class="material-symbols-outlined">
                             mail
@@ -39,6 +34,7 @@
                         <h3>Mesajlar</h3>
                         <span class="message-count">10</span>
                     </a>
+                    -->
                     <a href="#">
                         <span class="material-symbols-outlined">
                             inventory

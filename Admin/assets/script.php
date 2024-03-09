@@ -1,4 +1,5 @@
 <script src="./js/index.js"></script>
+
 <?php
 $totalPages = ceil($total / $usersPerPage);
 $currentPage = $currentPage ?? 1;
@@ -21,5 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+    
 });
 </script>
+

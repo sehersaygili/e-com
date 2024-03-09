@@ -80,7 +80,7 @@ img {
 }
 
 h1 {
-    font-weight: 800;
+    font-weight: 500;
     font-size: 1.8rem;
 }
 
@@ -450,6 +450,7 @@ main .recent-orders a {
 }  
 .right .cards .add-card:hover {
     box-shadow: none;
+    cursor: pointer;
 }
 .right .add-card .right {
     display: flex;
@@ -621,4 +622,106 @@ main .recent-users {
 .close:hover,
 .close:focus {
     color: #ff5b5b;
+}
+
+
+/* Add these styles to your existing stylesheet or create a new one */
+
+form {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+    width: 135%;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+form .row div label {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+    
+}
+
+form hr {
+    border: 1px solid var(--color-light);
+    margin-top: 1.5rem;
+}
+
+form button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--color-danger);}
+
+.alert {
+    margin-top: 1rem;
+}
+
+.alert-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: var(--border-radius-1);
+}
+
+.alert-success {
+    background-color: var(--color-success);
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: var(--border-radius-1);
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.7rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
+    margin-top:15px;
+}
+.rating {
+    display: block;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: center;
+}
+
+.rating .star {
+    display: none;
+}
+  
+.rating label {
+    color: lightgray;
+    display: inline-block;
+    font-size: 22pt;
+    margin: 0 -2px;
+    transition: transform .15s ease;
+}
+
+.rating label:hover {
+    transform: scale(1.35, 1.35);
+}
+  
+.rating label:hover, .rating label:hover ~ label {
+    color: orange;
+    cursor: pointer;
+}
+
+.rating .star:checked ~ label {
+    color: orange;
 }
