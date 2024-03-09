@@ -24,6 +24,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(empty(($_POST['phone']))) {
         $phoneErr = "Kullanıcı Telefon Boş Geçilemez!";
+    } else if(strlen($_POST['phone']) != 13) {
+        $phoneErr = "Geçersiz Sayıda Numara Girdiniz!";
     } elseif (!isValidPhoneNumber($_POST['phone'])) {
         $phoneErr = "Geçerli bir telefon numarası formatına uygun olmalıdır (örneğin, +90555XXXXXXX)";
     }

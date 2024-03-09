@@ -43,6 +43,7 @@ include_once 'assets/validation_errors.php';
             $typeText = ($userData['type'] == 1) ? 'Admin' : 'Müşteri';
 
             echo '<div class="alert alert-success mt-3">'.$typeText.' Eklendi!</div>';
+            exit();
         } else {
             echo '<div class="alert alert-danger mt-3">Sütun Eklenemedi!</div>';
         }
