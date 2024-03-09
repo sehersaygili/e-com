@@ -725,3 +725,9 @@ form button:hover {
 .rating .star:checked ~ label {
     color: orange;
 }
+
+.error{
+    color:var(--color-primary);
+    float: right;
+    padding-top: 10px;
+}
