@@ -11,11 +11,14 @@ $totalResult = $totalQuery->fetch(PDO::FETCH_ASSOC);
 $total = $totalResult['total'];
 
 ?> 
+<div class="header">
+        </div>
     <div class="container">
     <?php include 'assets/sidebar.php' ?> 
     <div class="users">
+        
         <div class="recent-users">
-            <h2>Kayıtlı Kullanıcılar</h2>
+        <h2>Kayıtlı Kullanıcılar</h2>
                 <table style="width: 135%;">
                     <thead>
                         <tr>
@@ -64,29 +67,42 @@ $total = $totalResult['total'];
                                 ?>
                             </td>
                             <td>
-                                <span class="success material-symbols-outlined">
+                            <a href="edit-user.php?id=<?= $user['id']; ?>">
+                                <span class="success material-symbols-outlined" style="float:left;">
                                     edit
                                 </span>
-                                <?php 
-                                if($user['status']==1) {
+                            </a>
+                            <?php 
+                              if ($user['status'] == 1) {
                                 ?>
-                                <span class="danger material-symbols-outlined">
-                                    delete
-                                </span>
-                                <?php } 
-                                else if($user['status']==0)
-                                 {?>
-                                <span class="warning material-symbols-outlined">
-                                visibility
-                                </span>
-                                <?php } ?>
+                                <a href="delete-user.php?id=<?= $user['id']; ?>">
+                                    <span class="danger material-symbols-outlined">
+                                        delete
+                                    </span>
+                                </a>
+                            <?php
+                            } else if (($user['status'] == 0) && ($user['deleted_at'] == null) ){
+                                ?>
+                                <a href="visibility-user.php?id=<?= $user['id']?>">
+                                    <span class="warning material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </a>
+                                <?php
+                             } else if  (($user['status'] == 0) && ($user['deleted_at'] != null)) {
+                                    ?>
+                                    <a href="undo-user.php?id=<?= $user['id'] ?>">
+                                        <span class="material-symbols-outlined">
+                                            undo
+                                        </span>
+                                    </a>
+                                <?php
+                                }
+                            }?>
                             </td>
                         </tr>
-
-                        <?php }?>
                     </tbody>
                 </table>
-
                 <div class="pagination">
                     <?php for ($i = 1; $i <= ceil($total / $usersPerPage); $i++): ?>
                         <button data-page="<?= $i ?>" <?= $i == $currentPage ? 'disabled' : '' ?>><?= $i ?></button>

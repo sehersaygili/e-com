@@ -632,8 +632,8 @@ form {
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     box-shadow: var(--box-shadow);
-    width: 135%;
-    margin-top:50px;
+    /* width: 135%; */ /* Bu satırı yorum satırına alarak kontrol edebilirsiniz */
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
