@@ -7,7 +7,7 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
 
     try{
-        $stmt = $con->prepare("UPDATE users SET deleted_at = NULL, status = 1 WHERE id = :id");
+        $stmt = $con->prepare("UPDATE users SET status = 1 WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $success = true;
@@ -19,8 +19,8 @@ if(isset($_GET['id'])){
     if ($success) { ?>
         <script>
             Swal.fire({
-                title: "Geri Alınıyor !",
-                text: "Silme İşlemi Geri Alındı !",
+                title: "Kişi Artık Aktif !",
+                text: "Kişi Aktif Hale Getiriliyor !",
                 icon: "success"
             }).then((result) => {
                 if(result.isConfirmed) {
