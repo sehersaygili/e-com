@@ -7,7 +7,7 @@ $maxLength = 30;
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kaydet'])) {
-
+    
     $nameLength = strlen($_POST['name']);
 
     if(empty($_POST['name'])) {
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kaydet'])) {
             $emailErr = "Bu E-posta Adresi Zaten Bulunmakta!";
         }
     }
-    if (empty($_GET['type'])) {
+    if (empty($_POST['type'])) {
         $typeErr = "Kullanıcı Tipi Seçmeyi Unuttunuz!";
     }
     if (empty($_POST['survey'])) {

@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+
+ini_set("display_errors",1);
 include_once 'assets/head.php';
 include_once 'assets/validation_errors.php';
 ?>
@@ -13,7 +16,6 @@ include_once 'assets/validation_errors.php';
                 :name, :surname, :email, :phone, :survey, :status, :type, :created_at
             )");
             
-        $status='1';
         $currentDateTime = date("Y-m-d H:i:s");
         
         $stmt->bindParam(':name', $_REQUEST['name'], PDO::PARAM_STR);
@@ -23,8 +25,9 @@ include_once 'assets/validation_errors.php';
         $stmt->bindParam(':survey', $_POST['star'], PDO::PARAM_STR);
         $stmt->bindParam(':type', $_REQUEST['type'], PDO::PARAM_STR);
         $stmt->bindParam(':created_at', $currentDateTime, PDO::PARAM_STR);
-        $stmt->bindParam(':status', $status, PDO::PARAM_STR);
-
+        $statusValue = isset($_POST['status']) ? 1 : 0;
+        $stmt->bindParam(':status', $statusValue, PDO::PARAM_INT);
+        
         $stmt->execute();
         } catch (\Exception $e) {
         }
@@ -51,7 +54,16 @@ include_once 'assets/validation_errors.php';
     ?>
     <br>
         <div class="row">
-            <div class="col-md-3" style="margin-bottom: 15px;">
+            <div class="col-md-3" style="margin-bottom: 15px; display: flex; align-items: center;">
+                <label style="flex: 1;">Durum</label>
+                <div class="status" name="status">
+                    <label class="switch">
+                        <input type="checkbox" name="status">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 15px; margin-top:30px;">
                 <label>Kullanıcı Adı</label>
                 <input class="form-control" type="text" name="name" >
                 <span class="error"><?php echo $nameErr; ?></span>
@@ -81,8 +93,8 @@ include_once 'assets/validation_errors.php';
                 <span class="error"><?php echo $typeErr; ?></span>
             </div>
             <div class="col-md-3" style="margin-bottom: 15px;">
-                <label style="display:block;float:left; margin-top:13px;">Puanınız</label>
-                <div class="rating" name="survey" style="float:left; margin-left:30px;">
+                <label>Puanınız</label>
+                <div class="rating" name="survey">
                     <input id="radio1" type="radio" name="star" value="5" class="star" />
                     <label for="radio1">&#9733;</label>
                     <input id="radio2" type="radio" name="star" value="4" class="star" />
@@ -96,9 +108,7 @@ include_once 'assets/validation_errors.php';
                 </div>
                 <span class="error"><?php echo $surveyErr; ?></span>
             </div>
-
-            
-            <div class="col-md-3 text-right" style="float:right;">
+            <div class="col-md-3 text-right">
                 <button class="btn btn-primary" name="kaydet" type="submit">Kaydet</button>
             </div>
         </div>
