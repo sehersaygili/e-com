@@ -81,8 +81,8 @@ include_once 'assets/validation_errors.php';
                 <span class="error"><?php echo $typeErr; ?></span>
             </div>
             <div class="col-md-3" style="margin-bottom: 15px;">
-                <label>Puanınız</label>
-                <div class="rating" name="survey">
+                <label style="display:block;float:left; margin-top:13px;">Puanınız</label>
+                <div class="rating" name="survey" style="float:left; margin-left:30px;">
                     <input id="radio1" type="radio" name="star" value="5" class="star" />
                     <label for="radio1">&#9733;</label>
                     <input id="radio2" type="radio" name="star" value="4" class="star" />
@@ -98,7 +98,7 @@ include_once 'assets/validation_errors.php';
             </div>
 
             
-            <div class="col-md-3 text-right">
+            <div class="col-md-3 text-right" style="float:right;">
                 <button class="btn btn-primary" name="kaydet" type="submit">Kaydet</button>
             </div>
         </div>

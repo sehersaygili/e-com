@@ -53,43 +53,6 @@
 
     </div>
     <!------- END OF INSIGHTS ------->
-
-    <div class="recent-orders">
-        <h2>Son Siparişler</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Ürün</th>
-                    <th>Ürün Numarası</th>
-                    <th>Ödeme Durumu</th>
-                    <th>Durum</th>
-                    <th>İşlemler</th>
-                </tr>
-            </thead>
-            <tr>
-                <td>Nescafe Black Roast</td>
-                <td>231A3FF2</td>
-                <td>Başarılı</td>
-                <td class="primary">Tamamlandı</td>
-                <td class="danger">Detay</td>
-            </tr>
-            <tr>
-                <td>Nestle Coffee Mate</td>
-                <td>D44A3FF2</td>
-                <td>Başarısız</td>
-                <td class="warning">Bekleniyor</td>
-                <td class="danger">Detay</td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="#" class="show-all-orders">
-        <span class="material-symbols-outlined">
-            line_end_arrow_notch
-        </span>
-        Show All
-    </a>
-</div>
-
     <div class="recent-users">
         <h2>Son Kullanıcılar</h2>
             <table>
@@ -144,4 +107,39 @@
                 <span class="material-symbols-outlined">line_end_arrow_notch</span>Show All
             </a>
         </div>
+    <div class="recent-orders">
+        <h2>Son Siparişler</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ürün</th>
+                    <th>Ürün Numarası</th>
+                    <th>Ödeme Durumu</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Nescafe Black Roast</td>
+                <td>231A3FF2</td>
+                <td>Başarılı</td>
+                <td class="primary">Tamamlandı</td>
+                <td class="danger">Detay</td>
+            </tr>
+            <tr>
+                <td>Nestle Coffee Mate</td>
+                <td>D44A3FF2</td>
+                <td>Başarısız</td>
+                <td class="warning">Bekleniyor</td>
+                <td class="danger">Detay</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" class="show-all-orders">
+        <span class="material-symbols-outlined">
+            line_end_arrow_notch
+        </span>
+        Show All
+    </a>
+</div>
 </main>

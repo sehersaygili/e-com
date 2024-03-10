@@ -7,3 +7,4 @@ $('.star').on('change', function() {
     let stars = $(this).val();
         console.log(stars);
   });
+

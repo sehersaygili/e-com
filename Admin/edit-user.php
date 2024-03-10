@@ -1,10 +1,12 @@
 <?php
+
+
 include_once 'assets/head.php';
 include_once 'assets/validation_errors.php';
 
-$user_id = $_GET['id']; // Replace with the actual user ID
+$lastInsertId = $_GET['id']; 
 $userQuery = $con->prepare("SELECT * FROM users WHERE id = :id");
-$userQuery->bindParam(':id', $user_id, PDO::PARAM_INT);
+$userQuery->bindParam(':id', $lastInsertId, PDO::PARAM_INT);
 $userQuery->execute();
 $userData = $userQuery->fetch(PDO::FETCH_ASSOC);
 
@@ -14,48 +16,31 @@ $userData = $userQuery->fetch(PDO::FETCH_ASSOC);
 
     <?php if (isset($_POST['duzenle'])){
         try {
-            $sql = "UPDATE users SET
+            $stmt = $con->prepare("UPDATE users SET
                 name = :name,
                 surname = :surname,
                 email = :email,
                 phone = :phone,
                 survey = :survey,
-                type = :type,
-                updated_at = :updated_at
-                WHERE id = :id"; 
-            
-                $stmt = $con->prepare($sql);
-                $stmt->bindParam(':name', $_REQUEST['name'], PDO::PARAM_STR);
-                $stmt->bindParam(':surname', $_REQUEST['surname'], PDO::PARAM_STR);
-                $stmt->bindParam(':email', $_REQUEST['email'], PDO::PARAM_STR);
-                $stmt->bindParam(':phone', $_REQUEST['phone'], PDO::PARAM_STR);
-                $stmt->bindParam(':survey', $_REQUEST['survey'], PDO::PARAM_STR);
-                $stmt->bindParam(':type', $_REQUEST['type'], PDO::PARAM_STR);
+                type = :type
+                WHERE id = :id"); 
+
+                $stmt->bindParam(':id', $lastInsertId, PDO::PARAM_INT);
+                $stmt->bindParam(':name', $_POST['name'], PDO::PARAM_STR);
+                $stmt->bindParam(':surname', $_POST['surname'], PDO::PARAM_STR);
+                $stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
+                $stmt->bindParam(':phone', $_POST['phone'], PDO::PARAM_STR);
+                $stmt->bindParam(':survey', $_POST['star'], PDO::PARAM_STR);
+                $stmt->bindParam(':type', $_POST['type'], PDO::PARAM_STR);
+
                 $stmt->execute();
-                
-        } catch (\Exception $e) {
-        }
+
+            } catch (\Exception $e) {
+            }
         
     }
     ?>
     <form role="form" method="POST" enctype="multipart/form-data" autocomplete="off" action="">
-    <?php 
-    if (isset($_POST['duzenle'])){
-        $userQuery = $con->prepare("SELECT type FROM users WHERE id= :id");
-        $userQuery->bindParam(':id', $lastInsertId, PDO::PARAM_INT);
-        $userQuery->execute();
-        $userData = $userQuery->fetch(PDO::FETCH_ASSOC);
-
-        if ($stmt->rowCount() > 0) {
-            $typeText = ($userData['type'] == 1) ? 'Admin' : 'Müşteri';
-
-            echo '<div class="alert alert-success mt-3">'.$typeText.' Eklendi!</div>';
-            exit();
-        } else {
-            echo '<div class="alert alert-danger mt-3">Sütun Eklenemedi!</div>';
-        }
-    }
-    ?>
     <br>
         <div class="row">
             <div class="col-md-3" style="margin-bottom: 15px;">
@@ -88,8 +73,8 @@ $userData = $userQuery->fetch(PDO::FETCH_ASSOC);
                 <span class="error"><?php echo $typeErr; ?></span>
             </div>
             <div class="col-md-3" style="margin-bottom: 15px;">
-                <label>Puanınız</label>
-                <div class="rating" name="survey">
+            <label style="display:block;float:left; margin-top:13px;">Puanınız</label>
+                <div class="rating" name="survey" style="float:left; margin-left:30px;">
                 <?php
                     $ratings = array(5, 4, 3, 2, 1);
 
@@ -102,10 +87,10 @@ $userData = $userQuery->fetch(PDO::FETCH_ASSOC);
                     echo '<label for="radio' . $rating . '">&#9733;</label>';
                 }
                 ?>
+                <span class="error"><?php echo $surveyErr; ?></span>
             </div>
-            <span class="error"><?php echo $surveyErr; ?></span>
             </div>
-            <div class="col-md-3 text-right">
+            <div class="col-md-3 text-right" style="float:right;">
                 <button class="btn btn-primary" name="duzenle" type="submit">Düzenle</button>
             </div>
         </div>
