@@ -7,7 +7,7 @@ $maxLength = 30;
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kaydet'])) {
-    
+
     $nameLength = strlen($_POST['name']);
 
     if(empty($_POST['name'])) {

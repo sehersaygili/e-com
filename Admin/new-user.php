@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-
-ini_set("display_errors",1);
 include_once 'assets/head.php';
 include_once 'assets/validation_errors.php';
 ?>
