@@ -527,6 +527,10 @@ table tbody tr:last-child td {
     color: var(--color-primary);
 }
 
+.recent-users .danger a {
+    color: var(--color-danger);
+}
+
 main .recent-users {
     margin-top: 2rem;
 }
@@ -635,6 +639,12 @@ form {
     /* width: 135%; */ /* Bu satırı yorum satırına alarak kontrol edebilirsiniz */
     margin-top: 50px;
     margin-bottom: 50px;
+    transition: all 300ms ease;
+
+}
+
+form:hover {
+    box-shadow:none;
 }
 
 form .row div label {
@@ -648,7 +658,7 @@ form input {
     margin-top: 1rem;
     border-radius: var(--border-radius-1);
     box-shadow: var(--box-shadow);
-    
+    color: var(--color-info-dark);
 }
 
 form hr {
@@ -693,6 +703,8 @@ form button:hover {
     border-radius: 0.25rem;
     box-shadow: var(--box-shadow);
     margin-top:15px;
+    color: var(--color-info-dark);
+
 }
 .rating {
     display: block;

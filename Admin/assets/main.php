@@ -101,7 +101,7 @@
                         <th>Telefon</th>
                         <th>Memnuniyet</th>
                         <th>Durum</th>
-                        <th></th>
+                        <th>İşlemler</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -133,7 +133,9 @@
                             }
                             ?>
                         </td>
-                        <td class="danger">Detay</td>
+                        <td class="danger">
+                            <a href="edit-user.php?id=<?= $user['id'] ?>">
+                            Detay</a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
